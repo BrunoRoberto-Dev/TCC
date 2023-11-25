@@ -9,7 +9,7 @@ O Meu Foco Total é um aplicativo mobile desenvolvido para para ajudar as pessoa
 ## Funcionalidades Principais
 
 - Gestão de tempo
-- Eye-tracking para foco quando o usuário estiver utilizando o celular
+- Face-tracking para foco quando o usuário estiver utilizando o celular
 - Gerenciamento da tela para usuário que preferem ficar fora do celular
 
 ## Como utilizar
