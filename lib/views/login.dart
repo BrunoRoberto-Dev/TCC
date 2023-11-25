@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:foco_alternativo/models/user_model.dart';
 import 'package:foco_alternativo/services/authentication.dart';
 import 'package:foco_alternativo/common/My_snackbar.dart';
+import 'package:foco_alternativo/services/signup_controller.dart';
 
 class LogIn extends StatefulWidget {
   const LogIn({super.key});
@@ -382,8 +384,12 @@ class LogInState extends State<LogIn> {
                                   .then((String? erro) {
                                 if (erro != null) {
                                   showSnackBar(context: context, text: erro);
+                                } else {
+                                  showSnackBar(
+                                      context: context,
+                                      text: 'CHECK YOUR E-MAIL TO CHANGE',
+                                      isError: false);
                                 }
-                                else {showSnackBar(context: context, text: 'CHECK YOUR E-MAIL TO CHANGE', isError: false);}
                               });
                             }),
                       ),
@@ -460,6 +466,9 @@ class LogInState extends State<LogIn> {
             showSnackBar(context: context, text: erro);
           }
         });
+        String? _uid = FirebaseAuth.instance.currentUser?.uid;
+        final user = UserModel(uid: _uid, email: email, nickname: nome, password: senha);
+        SignUpController.instance.createUser(user);
       }
     } else {
       print('Form invalido');
