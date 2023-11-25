@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "91219740751",
+    "project_id": "tcc-meu-foco-total",
+    "storage_bucket": "tcc-meu-foco-total.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91219740751:android:70ce3cfafa387ea5f2023a",
+        "android_client_info": {
+          "package_name": "com.example.foco_alternativo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnQSwWUoMG_UCuY898CLEhutILNVv2YKU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
